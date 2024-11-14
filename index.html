@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Dashboard Mahasiswa</title>
 </head>
 <body>
@@ -17,16 +17,13 @@
                 <a class="nav-link active" id="mahasiswa-tab" data-toggle="tab" href="#mahasiswa" role="tab" aria-controls="mahasiswa" aria-selected="true">Data Mahasiswa</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="ipk-tab" data-toggle="tab" href="#ipk" role="tab" aria-controls="ipk" aria-selected="false">Data IPK</a>
+                <a class="nav-link" id="khs-tab" data-toggle="tab" href="#khs" role="tab" aria-controls="khs" aria-selected="false">KHS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="krs-tab" data-toggle="tab" href="#krs" role="tab" aria-controls="krs" aria-selected="false">Data KRS</a>
+                <a class="nav-link" id="krs-tab" data-toggle="tab" href="#krs" role="tab" aria-controls="krs" aria-selected="false">KRS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="matakuliah-tab" data-toggle="tab" href="#matakuliah" role="tab" aria-controls="matakuliah" aria-selected="false">Data Mata Kuliah</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="hitung-tab" data-toggle="tab" href="#hitung" role="tab" aria-controls="hitung" aria-selected="false">Hitung IPK dan IPS</a>
             </li>
         </ul>
 
@@ -46,29 +43,57 @@
                 </table>
             </div>
 
-            <div class="tab-pane fade" id="ipk" role="tabpanel" aria-labelledby="ipk-tab">
-                <h2 class="mt-4">Data IPK</h2>
-                <table class="table" id="data-ipk">
-                    <thead>
-                        <tr>
-                            <th>NIM</th>
-                            <th>IPK</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Data IPK akan ditambahkan di sini -->
-                    </tbody>
-                </table>
+            <div class="tab-pane fade" id="khs" role="tabpanel" aria-labelledby="khs-tab">
+                <h2 class="mt-4">KHS</h2>
+                <div class="form-group">
+                    <label for="nimKHS">Masukkan NIM:</label>
+                    <input type="text" class="form-control" id="nimKHS" placeholder="NIM">
+                </div>
+                <div class="form-group">
+                    <label for="semesterKHS">Pilih Semester:</label>
+                    <select class="form-control" id="semesterKHS">
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" id="lihatGrafikButton">Lihat Grafik</button>
+                <div id="grafik" class="mt-4">
+                    <!-- Grafik IPK dan IPS akan ditampilkan di sini -->
+                </div>
             </div>
 
             <div class="tab-pane fade" id="krs" role="tabpanel" aria-labelledby="krs-tab">
-                <h2 class="mt-4">Data KRS</h2>
-                <table class="table" id="data-krs">
+                <h2 class="mt-4">KRS</h2>
+                <div class="form-group">
+                    <label for="nimKRS">Masukkan NIM:</label>
+                    <input type="text" class="form-control" id="nimKRS" placeholder="NIM">
+                </div>
+                <div class="form-group">
+                    <label for="semesterKRS">Pilih Semester:</label>
+                    <select class="form-control" id="semesterKRS">
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+ <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" id="tampilkanKRSButton">Tampilkan KRS</button>
+                <table class="table mt-4" id="data-krs">
                     <thead>
                         <tr>
-                            <th>NIM</th>
+                            <th>Kode Mata Kuliah</th>
+                            <th>Nama Mata Kuliah</th>
                             <th>Semester</th>
-                            <th>Mata Kuliah</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -82,26 +107,14 @@
                 <table class="table" id="data-matakuliah">
                     <thead>
                         <tr>
-                            <th>Kode</th>
+                            <th>Kode Mata Kuliah</th>
                             <th>Nama Mata Kuliah</th>
                         </tr>
- </thead>
+                    </thead>
                     <tbody>
                         <!-- Data Mata Kuliah akan ditambahkan di sini -->
                     </tbody>
                 </table>
-            </div>
-
-            <div class="tab-pane fade" id="hitung" role="tabpanel" aria-labelledby="hitung-tab">
-                <h2 class="mt-4">Hitung IPK dan IPS</h2>
-                <div class="form-group">
-                    <label for="nimInput">Masukkan NIM:</label>
-                    <input type="text" class="form-control" id="nimInput" placeholder="NIM">
-                </div>
-                <button class="btn btn-primary" id="hitungButton">Hitung</button>
-                <div id="grafik" class="mt-4">
-                    <!-- Grafik IPK dan IPS akan ditampilkan di sini -->
-                </div>
             </div>
         </div>
     </div>
