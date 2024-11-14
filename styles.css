@@ -1,53 +1,60 @@
 body {
     background-color: #f8f9fa; /* Warna latar belakang yang terang */
-    color: #343a40; /* Warna teks default */
+    color: #343a40; /* Warna teks utama */
+    font-family: 'Arial', sans-serif;
 }
 
-h1, h2 {
-    color: #dc3545; /* Merah untuk judul */
+.container {
+    background-color: #ffffff; /* Warna latar belakang kontainer */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    padding: 20px;
+}
+
+h1 {
+    color: #007bff; /* Warna biru untuk judul */
 }
 
 .nav-tabs .nav-link {
-    color: #dc3545; /* Merah untuk teks tab */
+    color: #007bff; /* Warna biru untuk tab */
 }
 
 .nav-tabs .nav-link.active {
-    background-color: #ffffff; /* Putih untuk tab aktif */
-    border-color: #dc3545; /* Merah untuk border tab aktif */
+    background-color: #007bff; /* Warna biru untuk tab aktif */
+    color: #ffffff; /* Warna teks putih untuk tab aktif */
 }
 
 .table {
-    border: 1px solid #dc3545; /* Merah untuk border tabel */
+    border-collapse: collapse; /* Menghilangkan jarak antara border */
 }
 
 .table th {
-    background-color: #dc3545; /* Merah untuk header tabel */
-    color: white; /* Teks putih untuk header tabel */
+    background-color: #343a40; /* Warna hitam untuk header tabel */
+    color: #ffffff; /* Warna teks putih untuk header tabel */
 }
 
-.table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Warna abu-abu muda untuk baris genap */
+.table td {
+    border: 1px solid #dee2e6; /* Border tabel */
 }
 
 .table tbody tr:hover {
-    background-color: #e2e6ea; /* Warna abu-abu saat hover */
+    background-color: #e9ecef; /* Warna latar belakang saat hover */
 }
 
 .btn-primary {
-    background-color: #dc3545; /* Merah untuk tombol */
-    border-color: #dc3545; /* Merah untuk border tombol */
+    background-color: #28a745; /* Warna hijau untuk tombol */
+    border-color: #28a745; /* Border hijau untuk tombol */
 }
 
 .btn-primary:hover {
-    background-color: #c82333; /* Merah lebih gelap saat hover */
-    border-color: #bd2130; /* Merah lebih gelap saat hover */
+    background-color: #218838; /* Warna hijau gelap saat hover */
+    border-color: #1e7e34; /* Border hijau gelap saat hover */
 }
 
-.form-control {
-    border: 1px solid #dc3545; /* Merah untuk border input */
-}
-
-.form-control:focus {
-    border-color: #dc3545; /* Merah saat fokus */
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* Bayangan saat fokus */
+#khsChart {
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #007bff; /* Border biru untuk grafik */
+    border-radius: 8px; /* Sudut melengkung */
+    background-color: #ffffff; /* Warna latar belakang grafik */
 }
